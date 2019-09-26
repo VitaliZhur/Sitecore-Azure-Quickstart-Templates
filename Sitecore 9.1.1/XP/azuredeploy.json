@@ -327,7 +327,7 @@
     },
     "processingEngineSqlDatabasePassword": {
       "type": "securestring",
-      "minLength": 8,
+      "minLength": 12,
       "defaultValue": "[concat(toUpper(uniqueString('processingengine', parameters('passwordSalt'))), uniqueString('processingengine', parameters('sqlServerPassword'), parameters('passwordSalt')), toUpper(uniqueString('processingengine', parameters('sitecoreAdminPassword'), parameters('passwordSalt'))), '4@')]"
     },
 
