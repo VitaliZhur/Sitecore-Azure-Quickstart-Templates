@@ -86,8 +86,8 @@
     },
     "processingEngineSqlDatabasePassword": {
       "type": "securestring",
-      "minLength": 8,
-      "defaultValue": "[concat(toUpper(uniqueString('processingengine', parameters('passwordSalt'))), uniqueString('processingengine', parameters('sqlServerPassword'), parameters('passwordSalt')), toUpper(uniqueString('processingengine', parameters('sitecoreAdminPassword'), parameters('passwordSalt'))), '4@')]"
+      "minLength": 10,
+      "defaultValue": "!!3edc1qaz6TvGERw7gJX96g!!"
     },
     "reportingSqlDatabaseUserName": {
       "type": "string",
