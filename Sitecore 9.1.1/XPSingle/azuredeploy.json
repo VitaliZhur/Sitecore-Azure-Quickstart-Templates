@@ -37,7 +37,18 @@
         ]
       }
     },
-
+	"aseName": {
+	"type": "string",
+	"metadata": {
+    "description": "Name of the App Service Environment"
+	}
+	},
+	"aseResourceGroupName": {
+	"type": "string",
+	"metadata": {
+    "description": "Name of the resource group that the ASE resides in."
+	}
+	},
     "templateLinkBase": {
       "type": "string",
       "minLength": 1,
@@ -582,6 +593,12 @@
           "deploymentId": {
             "value": "[parameters('deploymentId')]"
           },
+		  "aseName": {
+          "value": "[parameters('aseName')]"
+        },
+        "aseResourceGroupName": {
+          "value": "[parameters('aseResourceGroupName')]"
+        },
           "location": {
             "value": "[parameters('location')]"
           },
