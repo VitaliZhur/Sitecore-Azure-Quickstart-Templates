@@ -249,9 +249,9 @@
         "capacity": "[parameters('singleHostingPlanSkuCapacity')]"
       },
       "properties": {
-        "name": "[variables('singleHostingPlanNameTidy')]"
-		"hostingEnvironment": "[parameters('aseName')]",
-        "hostingEnvironmentId": "[resourceId(parameters('aseResourceGroupName'),'Microsoft.Web/hostingEnvironments', parameters('aseName'))]"
+      "name": "[variables('singleHostingPlanNameTidy')]",
+      "hostingEnvironment": "[parameters('aseName')]",
+      "hostingEnvironmentId": "[resourceId(parameters('aseResourceGroupName'),'Microsoft.Web/hostingEnvironments', parameters('aseName'))]"
       },
       "location": "[parameters('location')]",
       "tags": {
