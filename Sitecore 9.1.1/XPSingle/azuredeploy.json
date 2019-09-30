@@ -453,7 +453,7 @@
     },
     "singleHostingPlanSkuName": {
       "type": "string",
-      "defaultValue": "l3"
+      "defaultValue": "l1"
     },
     "singleHostingPlanSkuCapacity": {
       "type": "int",
