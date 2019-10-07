@@ -738,6 +738,12 @@
           "deploymentId": {
             "value": "[parameters('deploymentId')]"
           },
+	"aseName": {
+          "value": "[parameters('aseName')]"
+        },
+        "aseResourceGroupName": {
+          "value": "[parameters('aseResourceGroupName')]"
+        },
           "location": {
             "value": "[parameters('location')]"
           },
