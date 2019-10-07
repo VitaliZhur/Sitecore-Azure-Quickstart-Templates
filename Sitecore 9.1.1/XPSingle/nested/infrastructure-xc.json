@@ -127,7 +127,7 @@
     },
     "xcSingleHostingPlanSkuName": {
       "type": "string",
-      "defaultValue": "S1"
+      "defaultValue": "I1"
     },
     "xcSingleHostingPlanSkuCapacity": {
       "type": "int",
