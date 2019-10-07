@@ -46,16 +46,16 @@
       "minLength": 1,
       "defaultValue": "[resourceGroup().location]"
     },
-"aseName": {
+    "aseName": {
 	"type": "string",
 	"metadata": {
-    "description": "Name of the App Service Environment"
+        "description": "Name of the App Service Environment"
 	}
-	},
-	"aseResourceGroupName": {
+    },
+    "aseResourceGroupName": {
 	"type": "string",
 	"metadata": {
-    "description": "Name of the resource group that the ASE resides in."
+        "description": "Name of the resource group that the ASE resides in."
 	}
     },    
     "sqlServerName": {
