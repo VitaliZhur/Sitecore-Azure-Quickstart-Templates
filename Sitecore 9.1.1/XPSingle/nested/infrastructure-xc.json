@@ -156,7 +156,7 @@
       "apiVersion": "[variables('webApiVersion')]",
       "properties": {
         "clientCertEnabled": true,
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]",
+	"serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]",
         "siteConfig": {
           "use32BitWorkerProcess": false,
           "alwaysOn": true,
@@ -168,7 +168,7 @@
       },
       "location": "[parameters('location')]",
         "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]"
+        //"[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]"
       ],
       "tags": {
         "provider": "[variables('sitecoreTags').provider]",
