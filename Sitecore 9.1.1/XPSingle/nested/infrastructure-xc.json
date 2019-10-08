@@ -18,7 +18,7 @@
     "processingEngineTasksSqlDatabaseNameTidy": "[toLower(trim(parameters('processingEngineTasksSqlDatabaseName')))]",
     "processingEngineStorageSqlDatabaseNameTidy": "[toLower(trim(parameters('processingEngineStorageSqlDatabaseName')))]",
 
-    "xcSingleHostingPlanNameTidy":  "[resourceId(resourceGroup().name,'Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]",
+    "xcSingleHostingPlanNameTidy":  "[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]",
 
     "xcSingleWebAppNameTidy": "[toLower(trim(parameters('xcSingleWebAppName')))]",
 
