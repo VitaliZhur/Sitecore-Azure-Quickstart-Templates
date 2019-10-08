@@ -18,8 +18,6 @@
     "processingEngineTasksSqlDatabaseNameTidy": "[toLower(trim(parameters('processingEngineTasksSqlDatabaseName')))]",
     "processingEngineStorageSqlDatabaseNameTidy": "[toLower(trim(parameters('processingEngineStorageSqlDatabaseName')))]",
 
-    "xcSingleHostingPlanNameTidy":  "[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]",
-
     "xcSingleWebAppNameTidy": "[toLower(trim(parameters('xcSingleWebAppName')))]",
 
     "sitecoreTags": {
@@ -158,7 +156,7 @@
       "apiVersion": "[variables('webApiVersion')]",
       "properties": {
         "clientCertEnabled": true,
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('xcSingleHostingPlanNameTidy'))]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]",
         "siteConfig": {
           "use32BitWorkerProcess": false,
           "alwaysOn": true,
@@ -169,8 +167,8 @@
         }
       },
       "location": "[parameters('location')]",
-      "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', variables('xcSingleHostingPlanNameTidy'))]"
+        "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', parameters('xcSingleHostingPlanName'))]"
       ],
       "tags": {
         "provider": "[variables('sitecoreTags').provider]",
