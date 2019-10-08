@@ -435,7 +435,7 @@
     "xcSingleHostingPlanName": {
       "type": "string",
       "minLength": 1,
-      "defaultValue": "[concat(parameters('deploymentId'), '-xc-single-hp')]"
+      "defaultValue": "[concat(parameters('deploymentId'), '-single-hp')]"
     },
     "xcSingleHostingPlanSkuName": {
       "type": "string",
