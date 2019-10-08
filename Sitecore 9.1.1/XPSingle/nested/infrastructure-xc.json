@@ -18,7 +18,7 @@
     "processingEngineTasksSqlDatabaseNameTidy": "[toLower(trim(parameters('processingEngineTasksSqlDatabaseName')))]",
     "processingEngineStorageSqlDatabaseNameTidy": "[toLower(trim(parameters('processingEngineStorageSqlDatabaseName')))]",
 
-    "xcSingleHostingPlanNameTidy": "[toLower(trim(parameters('xcSingleHostingPlanName')))]",
+    "xcSingleHostingPlanNameTidy": "[toLower(trim(parameters('xcsingleHostingPlanName')))]",
 
     "xcSingleWebAppNameTidy": "[toLower(trim(parameters('xcSingleWebAppName')))]",
 
@@ -134,7 +134,7 @@
     "xcSingleHostingPlanName": {
       "type": "string",
       "minLength": 1,
-      "defaultValue": "[concat(parameters('deploymentId'), '-xc-single-hp')]"
+      "defaultValue": "[concat(parameters('deploymentId'), '-single-hp')]"
     },
     "xcSingleHostingPlanSkuName": {
       "type": "string",
@@ -152,26 +152,7 @@
     }
   },
   "resources": [
-    {
-      "type": "Microsoft.Web/serverfarms",
-      "name": "[variables('xcSingleHostingPlanNameTidy')]",
-      "apiVersion": "[variables('serverFarmApiVersion')]",
-      "sku": {
-        "name": "[parameters('xcSingleHostingPlanSkuName')]",
-        "capacity": "[parameters('xcSingleHostingPlanSkuCapacity')]"
-      },
-      "properties": {
-        "name": "[variables('xcSingleHostingPlanNameTidy')]",
-        "hostingEnvironment": "[parameters('aseName')]",
-        "hostingEnvironmentId": "[resourceId(parameters('aseResourceGroupName'),'Microsoft.Web/hostingEnvironments', parameters('aseName'))]"
-      },
-      "location": "[parameters('location')]",
-      "tags": {
-        "provider": "[variables('sitecoreTags').provider]",
-        "logicalName": "[variables('sitecoreTags').xcSingle]"
-      }
-    },
-    {
+     {
       "type": "Microsoft.Web/sites",
       "name": "[variables('xcSingleWebAppNameTidy')]",
       "apiVersion": "[variables('webApiVersion')]",
